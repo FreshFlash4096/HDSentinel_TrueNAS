@@ -63,3 +63,28 @@ If the HTML file is successfully generated, you should see a slightly different 
 <img src="./image/2-3 Execute HDS with html report.png" width=720 height=450>
 
 # 3. Read reports in Windows
+
+If you go back to Windows and enter the network location we connected to, you should find the downloaded archive, HDSentinel, and the html report that was just printed.
+
+<img src="./image/3-1 Access HDS report from Windows.png" width=720 height=450>
+
+If you run the HTML report directly, you'll see the report as shown below.
+
+<img src="./image/3-2 html report.png" width=720 height=450>
+
+Now let's monitor the drives on your NAS with HDSentinel installed on Windows.
+
+<img src="./image/3-3 Access HDS report from HDS (1).png" width=720 height=450>
+
+Click the Browse button and specify the html file.
+
+<img src="./image/3-4 Access HDS report from HDS (2).png" width=720 height=450>
+
+After a successful load, you can see how many physical drives are viewed and where the report is located.
+
+<img src="./image/3-5 Access HDS report from HDS (3).png" width=720 height=450>
+
+Click the OK button and watch HDSentinel read and display the report. You should see the drives on your TrueNAS added to the list of drives next to it.
+
+
+# 4. Scheduling report generation
