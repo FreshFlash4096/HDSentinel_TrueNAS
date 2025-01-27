@@ -88,3 +88,29 @@ Click the OK button and watch HDSentinel read and display the report. You should
 
 
 # 4. Scheduling report generation
+
+To return to TrueNAS and schedule the HDSentinel, we'll reopen the shell and gain privileges with ```sudo su```.
+
+Type in ```vim /etc/crontab``` and you should see something like the screen below.
+
+<img src="./image/4-1 Set crontab (int).png" width=720 height=450>
+
+In the image above, maneuver the arrows so that the cursor is in front of 17 as indicated by the arrow, press ```i``` once, press ```ENTER```, and move up so that we have a blank line.
+
+<img src="./image/4-2 Set crontab (fin).png" width=720 height=450>
+
+Enter ```*/10 *  *  *  * root    /mnt/Public/HDSentinel/HDSentinel -r /mnt/Public/HDSentinel/hdsreport.html -html``` as shown in the image above. This will cause HDSentinel to run every 10 minutes and output an html report.
+
+
+And let's save this edit by pressing ```esc``` and typing ```:wq```.
+
+<img src="./image/4-3 Complete.png" width=720 height=450>
+
+If we wait a bit, we will see the html report modified in Windows and HDSentinel will reflect this change.
+
+Now we can easily monitor the drives belonging to our TrueNAS with HDSentinel from Windows!
+
+# 5. References
+
+[How to: monitor Network Attached Storage (NAS) status](https://www.hdsentinel.com/how_to_monitor_network_attached_storage_nas_status.php)
+
